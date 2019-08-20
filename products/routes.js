@@ -85,17 +85,17 @@ router.get('/products/:id', (req, res, next) => {
 });
 
 /* POST, PUT, DELETE products can only be done by the store owners (Seller) who are logged in*/
-router.post('/products', (req, res, next) => {
-  Product
-  .create(req.body)
-  .then(product => {
-    if(!product) {
-      return res.status(406).send({
-        message: 'Product cannot be created'
-      })
-    }
-    return res.status(201).send(product)
-  })
-  .catch(error => next(error))
-})
+// router.post('/products', (req, res, next) => {
+//   Product
+//   .create(req.body)
+//   .then(product => {
+//     if(!product) {
+//       return res.status(406).send({
+//         message: 'Product cannot be created'
+//       })
+//     }
+//     return res.status(201).send(product)
+//   })
+//   .catch(error => next(error))
+// })
 module.exports = router
